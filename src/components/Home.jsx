@@ -1,4 +1,5 @@
 import useThemeStorage from './UseLocalStorage'
+import "./styles.css"
 
 const Home = () => {
 const [theme, setTheme] = useThemeStorage("theme", 'light')
@@ -10,7 +11,7 @@ const handleToggleTheme =()=>{
 console.log(theme)
 
   return (
-    <div className='light-dark-mode'>
+    <div className='light-dark-mode' data-theme={theme}>
       <div className="container">
         <p>Hello World!</p>
         <button onClick={handleToggleTheme}>Change Themev</button>
